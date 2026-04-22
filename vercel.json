@@ -1,4 +1,4 @@
- json{
+{
   "version": 2,
   "builds": [
     {
@@ -8,8 +8,20 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "/server.js"
+    },
+    {
+      "src": "/success",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/fail",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }
